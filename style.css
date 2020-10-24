@@ -1,0 +1,20 @@
+@page {
+    width: 50mm;
+    height: 10mm;
+}
+.label {
+    font-family: Verdana;
+    font-weight: bold;
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 7px;
+}
+
+img {
+    height: 4mm;
+    margin-left: 1mm;
+    display: inline-block;
+    vertical-align: middle;
+    image-rendering: pixelated;
+}
+  

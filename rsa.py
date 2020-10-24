@@ -27,11 +27,10 @@ def multiplicative_inverse(e, phi):
     temp_phi = phi
     
     while e > 0:
-        temp1 = temp_phi/e
+        temp1 = temp_phi//e
         temp2 = temp_phi - temp1 * e
         temp_phi = e
         e = temp2
-        
         x = x2- temp1* x1
         y = d - temp1 * y1
         
