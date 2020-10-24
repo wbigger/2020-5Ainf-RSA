@@ -19,4 +19,4 @@ label_writer = LabelWriter(
 
 # print(records)
 label_writer.write_labels(records_prv, target='barcode_and_label_prv.pdf')
-label_writer.write_labels(records_prv, target='barcode_and_label_pub.pdf')
+label_writer.write_labels(records_pub, target='barcode_and_label_pub.pdf')

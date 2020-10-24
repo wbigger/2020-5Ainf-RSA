@@ -1,13 +1,10 @@
 from rsa import decrypt
+import ast
 
-message = eval(input("inserisci il messaggio da decriptare: "))
 
-# Noi andremo a leggere chiave pubblica e privata da codice a barre
-# ora lo scriviamo direttamente dentro il codice
-private = (3285731,2316427)
-public = (962571,2316427)
+message = ast.literal_eval(input("inserisci il messaggio da decriptare: "))
 
-key = public
+key = ast.literal_eval(input("inserisci la chiave per decriptare: "))
 
 messaggio_in_chiaro = decrypt(key, message)
 print(messaggio_in_chiaro)
