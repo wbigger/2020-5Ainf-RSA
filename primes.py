@@ -1,4 +1,5 @@
 primes = {
+    "Claudio Capobianco": (17, 19),
     "Mario Avorio": (283, 947),
     # "Davide Brachetta": (4967, 6007),
     # "Alessandro Conti": (883, 4271),
