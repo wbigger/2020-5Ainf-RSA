@@ -51,7 +51,7 @@ def is_prime(num):
         return True
     if num < 2 or num % 2 == 0:
         return False
-    for n in xrange(3, int(num**0.5)+2, 2):
+    for n in range(3, int(num**0.5)+2, 2):
         if num % n == 0:
             return False
     return True
@@ -105,18 +105,18 @@ if __name__ == '__main__':
     '''
     Detect if the script is being run directly by the user
     '''
-    print "RSA Encrypter/ Decrypter"
-    p = int(raw_input("Enter a prime number (17, 19, 23, etc): "))
-    q = int(raw_input("Enter another prime number (Not one you entered above): "))
-    print "Generating your public/private keypairs now . . ."
+    print("RSA Encrypter/ Decrypter")
+    p = int(input("Enter a prime number (17, 19, 23, etc): "))
+    q = int(input("Enter another prime number (Not one you entered above): "))
+    print("Generating your public/private keypairs now . . .")
     public, private = generate_keypair(p, q)
-    print "Your public key is ", public ," and your private key is ", private
-    message = raw_input("Enter a message to encrypt with your private key: ")
+    print("Your public key is ", public ," and your private key is ", private)
+    message = input("Enter a message to encrypt with your private key: ")
     encrypted_msg = encrypt(private, message)
-    print "Your encrypted message is: "
-    print encrypted_msg
-    print ''.join(map(lambda x: str(x), encrypted_msg))
-    print "Decrypting message with public key ", public ," . . ."
-    print "Your message is:"
-    print decrypt(public, encrypted_msg)
+    print("Your encrypted message is: ")
+    print(encrypted_msg)
+    print(''.join([str(x) for x in encrypted_msg]))
+    print("Decrypting message with public key ", public ," . . .")
+    print("Your message is:")
+    print(decrypt(public, encrypted_msg))
 
